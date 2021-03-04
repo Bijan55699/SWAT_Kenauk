@@ -99,7 +99,9 @@
         elseif (global_hru_number == 1676) then ! for HP28
           line_giw_volx_mm = 28.77* (line_giw_volx_m3 ** 0.5812)
         elseif (global_hru_number == 1210) then ! for S6
-          line_giw_volx_mm = 195.0* (line_giw_volx_m3 ** 0.4553) 
+          line_giw_volx_mm = 195.0* (line_giw_volx_m3 ** 0.4553)
+        elseif (global_hru_number == 426) then ! for HP35
+          line_giw_volx_mm = 141.72* (line_giw_volx_m3 ** 0.3934) 
         else
           line_giw_volx_mm = 63.79 * (line_giw_volx_m3 ** 0.5467)  ! other wetlands
         end if

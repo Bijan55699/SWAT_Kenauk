@@ -203,6 +203,8 @@
                     giw_vol_m3 = 0.0031 * (giw_vol_mm(j) ** 1.7185)
                 elseif (j==1210) then
                     giw_vol_m3 = (9/1000000.0) *(giw_vol_mm(j) ** 2.196)
+                elseif (j==426) then
+                    giw_vol_m3 = (3/1000000.0) *(giw_vol_mm(j) ** 2.537)
                 else
                     giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291)   
                 end if
@@ -235,6 +237,9 @@
                 giw_sa_ha = giw_sa_m2(j)*0.0001
             elseif (j==1210) then
                 giw_sa_m2(j)  = 11.43 * (giw_vol_m3 ** 0.532)
+                giw_sa_ha = giw_sa_m2(j)*0.0001
+            elseif (j==426) then
+                giw_sa_m2(j)  = 19.75 * (giw_vol_m3 ** 0.552)
                 giw_sa_ha = giw_sa_m2(j)*0.0001
             else         
                 giw_sa_m2(j)  = 3.4426 * (giw_vol_m3 ** 0.6861)
@@ -270,6 +275,8 @@
                giw_evap_out_mm = 28.77* (giw_evap_out_m3 ** 0.802)
               elseif (j==1210) then
                giw_evap_out_mm = 195.0* (giw_evap_out_m3 ** 0.4553)
+              elseif (j==426) then
+               giw_evap_out_mm = 141.72* (giw_evap_out_m3 ** 0.3934)
               else
               giw_evap_out_mm = 63.79 * (giw_evap_out_m3 ** 0.5467) 
               end if
@@ -301,8 +308,10 @@
           giw_vol_m3 = 0.0031 * (giw_vol_mm(j) ** 1.7185)
       elseif (j==1210) then
           giw_vol_m3 = (9/1000000.0) * (giw_vol_mm(j) ** 2.196)
+      elseif (j==426) then
+          giw_vol_m3 = (3/1000000.0) *(giw_vol_mm(j) ** 2.537)
       else
-          giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291)                     
+          giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291)             
       end if
  
         if (j==55) then 
@@ -333,6 +342,9 @@
             giw_sa_ha = giw_sa_m2(j)*0.0001
         elseif (j==1210) then
             giw_sa_m2(j)  = 11.43 * (giw_vol_m3 ** 0.532)
+            giw_sa_ha = giw_sa_m2(j)*0.0001
+        elseif (j==426) then
+            giw_sa_m2(j)  = 19.75 * (giw_vol_m3 ** 0.552)
             giw_sa_ha = giw_sa_m2(j)*0.0001
         else         
             giw_sa_m2(j)  = 3.4426 * (giw_vol_m3 ** 0.6861)

@@ -57,6 +57,8 @@
           giw_vol_m3 = 0.0031 * (giw_vol_mm(j) ** 1.7185)
       elseif (j==1210) then
           giw_vol_m3 = (9/1000000.0) * (giw_vol_mm(j) ** 2.196)
+      elseif (j==426) then
+          giw_vol_m3 = (3/1000000.0) *(giw_vol_mm(j) ** 2.537)
       else
             giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291) 
                      
@@ -92,6 +94,9 @@
             giw_sa_ha = giw_sa_m2(j)*0.0001
         elseif (j==1210) then
             giw_sa_m2(j)  = 11.43 * (giw_vol_m3 ** 0.532)
+            giw_sa_ha = giw_sa_m2(j)*0.0001
+        elseif (j==426) then 
+            giw_sa_m2(j)  = 19.75 * (giw_vol_m3 ** 0.552)
             giw_sa_ha = giw_sa_m2(j)*0.0001
         else         
             giw_sa_m2(j)  = 3.4426 * (giw_vol_m3 ** 0.6861)
@@ -158,8 +163,10 @@
           giw_vol_m3 = 0.0031 * (giw_vol_mm(j) ** 1.7185)
       elseif (j==1210) then
           giw_vol_m3 = (9/1000000.0) * (giw_vol_mm(j) ** 2.196)
+      elseif (j==426) then
+          giw_vol_m3 = (3/1000000.0) *(giw_vol_mm(j) ** 2.537)
       else
-          giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291)                     
+          giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291)             
       end if
       
         if (j==55) then 
@@ -190,6 +197,9 @@
             giw_sa_ha = giw_sa_m2(j)*0.0001
         elseif (j==1210) then
             giw_sa_m2(j)  = 11.43 * (giw_vol_m3 ** 0.532)
+            giw_sa_ha = giw_sa_m2(j)*0.0001
+        elseif (j==426) then
+            giw_sa_m2(j)  = 19.75 * (giw_vol_m3 ** 0.552)
             giw_sa_ha = giw_sa_m2(j)*0.0001
         else         
             giw_sa_m2(j)  = 3.4426 * (giw_vol_m3 ** 0.6861)
@@ -222,7 +232,9 @@
         elseif (j == 1676) then ! for HP28
           giw_seepage_out_mm(j) = 28.77* (giw_seepage_out_m3 ** 0.5812)
         elseif (j == 1210) then ! for S6
-          giw_seepage_out_mm(j) = 195.0* (giw_seepage_out_m3 ** 0.4553) 
+          giw_seepage_out_mm(j) = 195.0* (giw_seepage_out_m3 ** 0.4553)
+        elseif (j == 426) then ! for HP35
+          giw_seepage_out_mm(j) = 141.72* (giw_seepage_out_m3 ** 0.3934)
         else
           giw_seepage_out_mm(j) = 63.79 * (giw_seepage_out_m3 ** 0.5467)  ! other wetlands
         end if
@@ -252,6 +264,8 @@
           giw_seepage_out_mm(j) = 28.77* (giw_seepage_out_m3 ** 0.802)
         elseif (j == 1210) then ! for S6
           giw_seepage_out_mm(j) = 195.0* (giw_seepage_out_m3 ** 0.4553) 
+        elseif (j == 426) then ! for HP35
+          giw_seepage_out_mm(j) = 141.72* (giw_seepage_out_m3 ** 0.3934)
         else
           giw_seepage_out_mm(j) = 63.79 * (giw_seepage_out_m3 ** 0.5467)  ! other wetlands
         end if
@@ -301,6 +315,8 @@
           giw_vol_m3 = 0.0031 * (giw_vol_mm(j) ** 1.7185)
       elseif (j==1210) then
           giw_vol_m3 = (9/1000000.0) * (giw_vol_mm(j) ** 2.196)
+      elseif (j==426) then
+          giw_vol_m3 = (3/1000000.0) *(giw_vol_mm(j) ** 2.537)
       else
             giw_vol_m3 = 0.0005 * (giw_vol_mm(j) ** 1.8291) 
                      
@@ -334,6 +350,9 @@
             giw_sa_ha = giw_sa_m2(j)*0.0001
         elseif (j==1210) then
             giw_sa_m2(j)  = 11.43 * (giw_vol_m3 ** 0.532)
+            giw_sa_ha = giw_sa_m2(j)*0.0001
+        elseif (j==426) then
+            giw_sa_m2(j)  = 19.75 * (giw_vol_m3 ** 0.552)
             giw_sa_ha = giw_sa_m2(j)*0.0001
         else         
             giw_sa_m2(j)  = 3.4426 * (giw_vol_m3 ** 0.6861)
